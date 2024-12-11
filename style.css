@@ -63,7 +63,7 @@ body{
 }
 .winner{
     color: #413666;
-    font-size:60px;
+    font-size:32px;
     margin-top: 5px;
     border: none;
     /* box-shadow: 0 0 1rem rgba(209, 84, 209, 0.97); */
@@ -88,3 +88,6 @@ body{
     /* padding-bottom: 32px; */
 
 }
+/* .heading{
+    display: none;
+} */

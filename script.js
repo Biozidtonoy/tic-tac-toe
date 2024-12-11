@@ -2,6 +2,7 @@ let buttons = document.querySelectorAll(".btn-box");
 let restartBtn = document.querySelector("#restart-btn");
 let winContainer = document.querySelector(".win-container");
 let winMsg = document.querySelector(".winner");
+let heading = document.querySelector(".heading");
 
 let turnO = true ;
 
@@ -16,11 +17,13 @@ const winPatterns =[
     [6,7,8],
 ];
 
+
 buttons.forEach((box)=>{
     box.addEventListener("click",() =>{
         console.log('box was clicked'); 
         if(turnO){
             box.innerText = 'O';
+            box.style.color = "green";
             turnO = false;
         } else{
             box.innerText = 'X';
@@ -51,8 +54,9 @@ const disabledBtns = ()=>{
 }
 
 const showWinner = (winner) =>{
-    winMsg.innerText =` "Congatulations, Winner is ${winner}"`;
+    winMsg.innerText =` "Congratulations, Winner is ${winner}"`;
     winContainer.classList.remove('hide');
+    heading.style.display = "hide";
     disabledBtns();
 }
 
@@ -76,4 +80,4 @@ const checkWinner = () =>{
     }
 };
 
-restartBtn.addEventListener("click", rstBtn)
+restartBtn.addEventListener("click",rstBtn);
