@@ -27,6 +27,7 @@ buttons.forEach((box)=>{
             turnO = false;
         } else{
             box.innerText = 'X';
+            box.style.color = "red";
             turnO = true;
         }
         box.disabled = true;
@@ -37,6 +38,7 @@ buttons.forEach((box)=>{
 const rstBtn =()=>{
     turnO = true;
     winContainer.classList.add("hide");
+    heading.style.display= "block";
     enableBtns();
 }
 
@@ -56,7 +58,7 @@ const disabledBtns = ()=>{
 const showWinner = (winner) =>{
     winMsg.innerText =` "Congratulations, Winner is ${winner}"`;
     winContainer.classList.remove('hide');
-    heading.style.display = "hide";
+    heading.style.display = "none";
     disabledBtns();
 }
 
